@@ -33,6 +33,18 @@ function isBase32(text, noPadding) {
     return pattern.test(text);
 }
 
-function isBase32Hex(text, noPadding) { 
-    // TODO
+function isBase32Hex(text, noPadding) {
+    var pattern = /^([A-V0-9]{8})*([A-V0-9]{8}|[A-V0-9]{7}=|[A-V0-9]{5}===|[A-V0-9]{4}====|[A-V0-9]{2}======)$/;
+    noPadding = noPadding || false;
+    if (noPadding) {
+        var patternStr = pattern.source.replace(/=/g, '');
+        pattern = new RegExp(patternStr);
+        return pattern.test(text);
+    }
+    return pattern.test(text);
+}
+
+function isBase16(text) {
+    var pattern = /^([A-F0-9]{2})+$/;
+    return pattern.test(text);
 }
