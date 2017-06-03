@@ -44,7 +44,21 @@ function isBase32Hex(text, noPadding) {
     return pattern.test(text);
 }
 
-function isBase16(text) {
-    var pattern = /^([A-F0-9]{2})+$/;
+function isHex(text) {
+    var pattern = /^([A-F0-9]{2})+$/i;
     return pattern.test(text);
+}
+
+function find(text) {
+    if (isHex(text))
+        return 'hex';
+    if (isBase32(text) || isBase32(text, true))
+        return 'base32';
+    if (isBase32Hex(text) || isBase32Hex(text, true))
+        return 'base32hex';
+    if (isBase64(text) || isBase64(text, true))
+        return 'base64';
+    if (isBase64URL(text) || isBase64URL(text, true))
+        return 'base64url';
+    return 'invalid base encoding';
 }
