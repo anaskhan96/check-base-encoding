@@ -56,5 +56,6 @@ module.exports = {
     isBase64URL,
     isBase32,
     isBase32Hex,
-    isHex
+    isHex,
+    detect
 }
