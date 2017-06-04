@@ -1,6 +1,6 @@
 {
   "name": "check-base-encoding",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "checks and verifies the particular base encoding of a string",
   "main": "index.js",
   "scripts": {
