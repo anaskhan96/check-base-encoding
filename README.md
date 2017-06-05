@@ -10,6 +10,12 @@ npm module to check and verify base encoding of a particular string according to
 npm install --save check-base-encoding
 ```
 
+Or on the client side,
+
+```html
+<script src="https://cdn.rawgit.com/anaskhan96/check-base-encoding/master/browser/check-base-min.js"></script>
+```
+
 ### Usage
 
 ```javascript
