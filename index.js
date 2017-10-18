@@ -40,25 +40,10 @@ function isHex (text) {
   return pattern.test(text)
 }
 
-function detect (text) {
-  if (isHex(text))
-    return 'hex'
-  if (isBase32(text) || isBase32(text, true))
-    return 'base32'
-  if (isBase32Hex(text) || isBase32Hex(text, true))
-    return 'base32hex'
-  if (isBase64(text) || isBase64(text, true))
-    return 'base64'
-  if (isBase64URL(text) || isBase64URL(text, true))
-    return 'base64url'
-  return 'invalid base encoding'
-}
-
 module.exports = {
   isBase64,
   isBase64URL,
   isBase58,
   isBase32,
   isBase32Hex,
-  isHex,
-detect}
+isHex}
