@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/anaskhan96/check-base-encoding.svg?branch=master)](https://travis-ci.org/anaskhan96/check-base-encoding)
 [![npm version](https://badge.fury.io/js/check-base-encoding.svg)](https://badge.fury.io/js/check-base-encoding)
 
-npm module to check and verify base encoding of a particular string according to the [RFC4648](https://tools.ietf.org/html/rfc4648) spec.
+npm module to check and verify base encoding of a particular string according to the [RFC 4648](https://tools.ietf.org/html/rfc4648) spec.
 
 ### Installation
 
